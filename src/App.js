@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { Home } from "../src/Component/Home.jsx";
+import { About } from "../src/Component/About.jsx";
+import { Navigation } from "./Component/Nav.jsx";
+import { Movies } from "./Component/Movies";
+import { Route } from "react-router-dom";
+import { Trailer } from "./Component/Trailer";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/movies" component={Movies} />
+      <Route path="/about" component={About} />
+      <Route path="/movies/:id" component={Trailer} />
     </div>
   );
 }
