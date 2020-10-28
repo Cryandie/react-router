@@ -1,7 +1,7 @@
 import React , {useState, useEffect} from 'react'
 import {Button} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { MovieData } from './Data';
+import { MovieData } from '../App';
 
 
 export const Trailer = ({match}) => {
@@ -20,7 +20,7 @@ export const Trailer = ({match}) => {
               <h1 className="trailer-title"> {movie.title} </h1>
               <p className="trailer-description">{movie.description}</p>
               <div className="movie-babycontainer">
-              <iframe src={movie.trailerUrl} width="860" height="515"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+              <iframe src={movie.trailerUrl}title={movie.title}  width="860" height="515"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
              </div>
              <div className="backbtn">
           <Link to="/movies"> <Button variant="dark">Back to movies</Button></Link>

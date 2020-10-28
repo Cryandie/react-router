@@ -22,7 +22,7 @@ a:hover {
 .movieposter {
   width: 350px;
   height: 500px;
-  margin-bottom: 12rem;
+  margin-bottom: 4rem;
 }
 .movies-container {
   display: flex;
@@ -34,7 +34,7 @@ a:hover {
 .big-title {
   display: flex;
   justify-content: center;
-  margin-bottom: 75px;
+  margin-bottom: 55px;
   font-weight: bolder;
   color: rgb(212, 206, 206);
 }
@@ -70,4 +70,8 @@ a:hover {
   margin-bottom: 45px;
   font-style: oblique;
   font-weight: bold;
+}
+.new-mvform {
+  display: flex;
+  justify-content: center;
 }
